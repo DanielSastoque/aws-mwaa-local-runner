@@ -14,7 +14,7 @@ services:
             - ${PWD}/airflow-bucket/dags:/usr/local/airflow/dags
             - ${PWD}/airflow-bucket/plugins:/usr/local/airflow/plugins
         ports:
-            - "8080:8080"
+            - "8085:8080"
         command: webserver
         healthcheck:
             test: ["CMD-SHELL", "[ -f /usr/local/airflow/airflow-webserver.pid ]"]
