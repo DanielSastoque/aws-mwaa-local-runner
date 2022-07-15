@@ -21,9 +21,9 @@ export \
 # Install custom python package if requirements.txt is present
 install_requirements() {
     # Install custom python package if requirements.txt is present
-    if [[ -e "$AIRFLOW_HOME/airflow-bucket/requirements.txt" ]]; then
+    if [[ -e "$AIRFLOW_HOME/requirements.txt" ]]; then
         echo "Installing requirements.txt"
-        pip3 install --user -r "$AIRFLOW_HOME/airflow-bucket/requirements.txt"
+        pip3 install --user -r "$AIRFLOW_HOME/requirements.txt"
     fi
 }
 
